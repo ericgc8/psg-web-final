@@ -1,18 +1,14 @@
 // src/components/ContactSection/ContactSection.tsx
 import React, { useState } from 'react';
 import Button from '../Button/Button';
-import Modal from '../Modal'; // Import the Modal component
 
 interface ContactSectionProps {
   id?: string; // Make id optional
 }
 
 const ContactSection: React.FC<ContactSectionProps> = ({ id }) => {
-  const [isModalOpen, setIsModalOpen] = useState(false);
-
-  const handleOpenModal = () => setIsModalOpen(true);
-
-  const handleCloseModal = () => setIsModalOpen(false);
+  
+  const typeformLink = "https://mjp836kxygm.typeform.com/to/u6WxM287"; // Typeform link
 
   return (
     <section id={id} className="py-16 px-6 md:px-12 bg-soft-cream text-center">
@@ -24,15 +20,11 @@ const ContactSection: React.FC<ContactSectionProps> = ({ id }) => {
         We're here to help! Reach out to us, and let's discuss how we can
         elevate your beauty business.
       </p>
-      <Button
-        variant="dark"
-        size="lg"
-        onClick={handleOpenModal} // Open modal on button click
-      >
-        Send Us a Message
-      </Button>
-      {/* Modal Component */}
-      <Modal isOpen={isModalOpen} onClose={handleCloseModal} />
+      <a href={typeformLink} target="_blank" rel="noopener noreferrer">
+        <Button variant="dark" size="lg">
+          Fill Out Our Intake Form
+        </Button>
+      </a>
     </section>
   );
 };
