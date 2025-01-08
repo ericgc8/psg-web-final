@@ -1,0 +1,25 @@
+/* RainOfEmojis.css */
+.emoji-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw; /* Ensure it only takes the full width of the viewport */
+  height: 100%;
+  pointer-events: none; /* Ignore mouse events */
+  overflow: hidden; /* Prevent horizontal overflow */
+}
+
+.emoji {
+  position: absolute;
+  top: -50px; /* Start above the viewport */
+  font-size: 2rem; /* Adjust size as needed */
+  opacity: 0.5; /* Low opacity for background effect */
+  animation: fall linear forwards;
+}
+
+@keyframes fall {
+  to {
+    transform: translateY(100vh); /* Fall to the bottom of the viewport */
+    opacity: 0; /* Fade out as it falls */
+  }
+}

@@ -1,0 +1,21 @@
+/* Assuming this is your existing ribbon CSS */
+.ribbon {
+  position: absolute;
+  top: 0;
+  right: -20px; /* Adjust this value based on your design */
+  background-color: #ff69b4; /* Change to your desired color */
+  color: white;
+  padding: 5px 10px;
+  transform: rotate(45deg);
+  font-size: 14px;
+}
+
+/* Make sure the ribbon does not overflow */
+@media (max-width: 768px) {
+  .ribbon {
+    right: -10px; /* Adjust this value for mobile */
+    transform: rotate(45deg);
+    padding: 4px; /* Adjust padding for smaller screens */
+    font-size: 12px; /* Smaller font size for mobile */
+  }
+}
